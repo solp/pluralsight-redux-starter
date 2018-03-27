@@ -12,8 +12,10 @@ import {Provider} from 'react-redux'; //Provider attaches our store to our React
 const store = configureStore (); //here, we're not passing parameters because on the reducer parameters we're initialising if we put it here we will override those parameters
 //when use it? when we need to pass something from the serveror store in local store
 render(
-	<Provider store = {store}> //it wraps our complete app to connect with the store
-    	<Router history={browserHistory} routes={routes} />
-    </Provider>,
-    document.getElementById('app')
+	<Provider store={store}>
+      <div>
+        <Router history={browserHistory} routes={routes} />
+      </div>
+    </Provider>
+    , document.getElementById('app')
 );

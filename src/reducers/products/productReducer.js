@@ -1,10 +1,11 @@
+import * as types from '../../actions/actionTypes';
 export default function productReducer(state = [], action) {
 	switch (action.type){
-		case 'CREATE_PRODUCT':
+		case types.CREATE_PRODUCT:
 			return[...state,
 				Object.assign({}, action.product)
-			]
+			];
 		default: 
-		    return state;
+          return state;
 	}
 }
